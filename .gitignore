@@ -3,4 +3,5 @@
 *.rpyb
 saves/
 log.txt
+traceback.txt
 tmp/
