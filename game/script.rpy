@@ -177,9 +177,10 @@ label weird_people_day:
     accident."
     me "Hi, Christy.. I'm so glad you came.. I was so worried.."
     "I really was. Was afraid of loosing her."
-    ch "Sorry i am late.. But it's not time for that. Look there. Something
-    happend, i think it's not quite safe to stay here now. Let's go back to the
-    subway and then decide where to go."
+    ch "Sorry i am late.. But it's not time for that."
+    ch "Look there. Something happend, i think it's not quite safe to stay here
+    now."
+    ch "Let's go back to the subway and then decide where to go."
     "She doesn't look really frightend even though now it's obviously looking
     like a serious situation: people are chaotically running everywhere.
     {p}But she looks only a bit worried and maybe even annoyed."
@@ -193,9 +194,10 @@ label weird_people_day:
     
     "When we're already in the train heading towards city center, i say:"
     me "This all looks like we're running from the police"
-    ch "You feel so? Don't tell me you were playing another of your stupid
-    detective games this morning."
-    me "Well, i did. There wasn't anything better to do on the way here anyway"
+    ch "You feel so? Don't tell me you had time to play another of your stupid
+    detective games today already."
+    me "Well, yeah, i played. There wasn't anything better to do on the way here
+    anyway."
     ch "See, it's all your imagination!"
     me "But that accident, i don't even know what was that, but it happend."
     me "And you say such things happen only in fiction!"
@@ -203,7 +205,7 @@ label weird_people_day:
     "She slightly pokes me and laughs."
     ch "More importantly, where are we going now?"
     "I start thinking, but she interrupts it."
-    ch "What about Transient Cafe? It's quite nice."
+    ch "What about Transient Cafe? It's quite nice and cozy."
     me "Really? I've never been there before. But lets go."
     
     "By this time the train is already approaching next station."
@@ -230,6 +232,7 @@ label weird_people_day:
     neck."
     ch "Or he's dead!"
     a0 "Oy, oy, are you really that serious, bitch?"
+    ch "Don't even try to fuck with me, idiot!"
     "At this moment train is starting to leave station. I nearly lost balance
     and blade pricked me again. Finally i regain ability to speak."
     me "What.. what is this all?.. Christy, what is happenning?.."
@@ -240,8 +243,8 @@ label weird_people_day:
     ch "Not time to babble, Jack! I need to get out of here, Jack so you'll be
     my shield for now. And you - drop your weapon NOW!"
     "Her voice sounds so cold and now i get {i}really{/i} scared of dying."
-    "Their leader doesn't obey but doesn't make any jerky movements. He's not
-    even pointing his pistol in our direction."
+    "Their leader doesn't obey but doesn't make any jerky movements either. He's
+    not even pointing his pistol in our direction."
     ch "I'll count to three and if you don't drop your weapons and hold your
     hands in the air, you'll have a dead body on you!"
     "She starts counting:"
@@ -286,6 +289,8 @@ label crawl_to_her:
     "After this words i suddenly stumble and feel weak. Voices and shooting
     sounds becomes distant and muted.. My mind slowly collapses into the
     darkness."
+    
+    
     
     me "Am i dying now?.. Damn, i won't even know how well my LD project is
     received... And.. what happend to detective and John.."
