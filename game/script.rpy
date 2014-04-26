@@ -202,7 +202,7 @@ label weird_people_day:
     ch "I'm just joking, silly."
     "She slightly pokes me and laughs."
     ch "More importantly, where are we going now?"
-    I start thinking, but she interrupts it.
+    "I start thinking, but she interrupts it."
     ch "What about Transient Cafe? It's quite nice."
     me "Really? I've never been there before. But lets go."
     
@@ -261,13 +261,13 @@ label crawl_to:
     
     menu:
         "Crawl towards her":
-            attitude += 1
+            $ attitude += 1
             jump crawl_to_her
         "Lay down" if not laying_down:
             $ laying_down = True
             jump lay_down
         "Crawl towards agents":
-            attitude -= 1
+            $ attitude -= 1
             jump crawl_to_agents
     
 label lay_down:
