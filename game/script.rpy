@@ -26,16 +26,19 @@ define a0 = Character("Agent 1",        color="#776644")
 define a1 = Character("Agent 2",        color="#776644")
 define a2 = Character("Agent 3",        color="#776644")
 define a3 = Character("Agent 4",        color="#776644")
+define tv = Character("TV speaker",     color="#AA1111")
 
 # TRANSFORMS
-define distant          = Transform(yoffset=210)
-define close            = Transform(yoffset=240)
-define very_close       = Transform(yoffset=580, zoom=1.5)
+define distant          = Transform(yoffset=210, zoom=0.5)
+define close            = Transform(yoffset=240, zoom=0.5)
+define very_close       = Transform(yoffset=580, zoom=0.75)
 define shrouded         = Transform(alpha=0.5)
 
 # The game starts here.
 label start:
     $ attitude = 0
+    
+    play music "slow-fun-1.ogg"
     
     scene bg black
     with dissolve
@@ -414,6 +417,8 @@ label crawl_to_her:
     scene bg red
     with dissolve
     
+    stop music
+    
     "After this words i suddenly stumble and feel weak. Voices and shooting
     sounds becomes distant and muted.."
     
@@ -489,6 +494,9 @@ label crawl_to_agents:
     
     scene bg red
     with dissolve
+    
+    stop music
+    
     "I feel shock and weakness. Voices and shooting sounds become distant and
     muted.."
     
@@ -517,6 +525,8 @@ label real_wakeup:
     attempt to scream."
     "I stop and get up smashing tin can with my foot. Probably beer can.. Yeah,
     we were drinking yesterday.."
+    
+    play music "slow-fun-1.ogg"
     
     show christine normal at center, distant
     "Then i see Christine and Fyodor standing in the
@@ -639,6 +649,8 @@ label bloody_ending:
     scene bg red
     with fade
     
+    stop music
+    
     "BOOM!"
     
     ":: Bloody Ending ::"
@@ -693,6 +705,8 @@ label bad_ending_end:
     
     "When i was almost sleeping, the show was over and news started."
     
+    stop music
+    
     tv "..at the amusement park.. ..explosion.. ..was killed.."
     
     "I wasn't paying attention initially and missed some words, but general
@@ -731,6 +745,8 @@ label common_ending:
     
     "We have a breakfast and then she leaves taking that package with her."
     
+    hide christine
+    
     "..."
     
     if ending == "normal":
@@ -744,6 +760,9 @@ label credits:
     scene bg black
     with fade
     
+    "That was one of five endings possible.."
+    
+    play music "slow-fun-1.ogg"
     "(c) caryoscelus, 2014"
     "licensed under
     {a=http://creativecommons.org/licenses/by-sa/4.0/}CC-BY-SA{/a}"
