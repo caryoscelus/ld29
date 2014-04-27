@@ -11,6 +11,8 @@ image bg fontain        = "fontain-1.png"
 
 image christine normal  = "christine-1.png"
 image stranger normal   = "stranger-1.png"
+image nobody normal     = "nobody-1.png"
+image nobody2 normal    = "nobody-1.png"
 
 # CHARACTERS
 define me = Character("Me",             color="#888888")
@@ -92,6 +94,9 @@ label elevator_run:
     scene bg elevator
     with fade
     "I've made it! Doors closes behind me and i almost bumped into somebody."
+    
+    show nobody normal at left, close
+    
     me "Excuse me.."
     n0 "Oh, hey, aren't you Jack?"
     me "Emm.. Yeah."
@@ -116,6 +121,8 @@ label elevator_early:
     "On seventh floor elevator stops and an elderly woman comes into it. She
     looks a bit nervous."
     
+    show nobody normal at left, close
+    
     n1 "Excuse me, have you heard anything about that giantic metheorite coming
     to destroy the Earth?.. I am so worried.. But please tell, what do you think
     of it?.."
@@ -131,6 +138,9 @@ label elevator_late:
     with fade
     
     "I burst into closing doors and bump into kissing couple."
+    
+    show nobody normal at left, close
+    
     "For a second i regret running so enthusiastic."
     me "Sorry!"
     "They only give me a long look though."
@@ -317,6 +327,12 @@ label weird_people_day:
     come into the coach. Then everything happens very fast. I catch gaze of one
     of them. I observe his hand coming out of pocket, and then suddenly feel
     something cold by my neck and somebody pulling me back."
+    
+    show nobody normal at center, close
+    show nobody2 normal at right, close
+    
+    show christine normal at left, very_close
+    
     ch "Drop your weapons and get out of here! Our i'll cut his throat!"
     "What?! As i hear this i realize that it's Christine staying behind me and
     pressing dagger's blade on my neck."
@@ -572,7 +588,7 @@ label box_ask:
     no new comments except for some guy complaining about game crashed. Well, i
     can't help anyway."
     
-    "Then Christine goes from "
+    "Then Christine returns from bathroom. I ask her about the package."
     
     if attitude < 0:
         jump bad_ending
