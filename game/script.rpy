@@ -10,6 +10,7 @@ image bg subway         = "subway-1.png"
 image bg fontain        = "fontain-1.png"
 
 image christine normal  = "christine-1.png"
+image stranger normal   = "stranger-1.png"
 
 # CHARACTERS
 define me = Character("Me",             color="#888888")
@@ -18,14 +19,17 @@ define fe = Character("Fyodor",         color="#2244CC")
 define n0 = Character("Neightbour",     color="#000000")
 define n1 = Character("Neightbour",     color="#000000")
 define n2 = Character("Neightbour",     color="#000000")
-define s0 = Character("Stranger",       color="#000000")
-define a0 = Character("Agent 0",        color="#776644")
-define a1 = Character("Agent 1",        color="#776644")
-define a2 = Character("Agent 2",        color="#776644")
-define a3 = Character("Agent 3",        color="#776644")
+define s0 = Character("Stranger",       color="#000000", image="stranger")
+define a0 = Character("Agent 1",        color="#776644")
+define a1 = Character("Agent 2",        color="#776644")
+define a2 = Character("Agent 3",        color="#776644")
+define a3 = Character("Agent 4",        color="#776644")
 
 # TRANSFORMS
-define close = Transform(yoffset=240)
+define distant          = Transform(yoffset=210)
+define close            = Transform(yoffset=240)
+define very_close       = Transform(yoffset=580, zoom=1.5)
+define shrouded         = Transform(alpha=0.5)
 
 # The game starts here.
 label start:
@@ -190,6 +194,9 @@ label subway_1:
     minutes passing. I'm starting to think about calling her."
     
     s0 "Hey!"
+    
+    show stranger normal at center, close
+    
     "Suddenly, someone calls out to me. I turn around and see the stranger."
     "At first glance he seems to be somehow familiar to me, but i can't even
     determine why."
@@ -211,12 +218,16 @@ label show_the_way:
     s0 "Thank you so much"
     "Despite his look, he bows ceremoniously and then disappears in the crowd."
     
+    hide stranger
+    
     jump weird_people_day
     
 label dont_know:
     "I don't want to strain my brain now.."
     me "Sorry, i don't know.."
     s0 "..umm, fine."
+    
+    hide stranger
     "He quickly disappears in the crowd."
     
     jump weird_people_day
@@ -349,7 +360,8 @@ label weird_people_day:
     their pistols, and \"bum\" shooting at them with submachine gun in the
     jump."
     "When i hit the ground, i see two of agents fell on the ground with blood
-    on their bodies. Christine jumped past me and took position behind seats."
+    on their bodies. Christine jumped past me and took position behind the
+    seats."
     
     $ laying_down = False
 label crawl_to:
@@ -378,11 +390,11 @@ label crawl_to_her:
     
     a2 "Damned boy! He's her mate in the end! We should've shoot him ealier."
     
-    "After this words i suddenly stumble and feel weak. Voices and shooting
-    sounds becomes distant and muted.."
-    
     scene bg red
     with dissolve
+    
+    "After this words i suddenly stumble and feel weak. Voices and shooting
+    sounds becomes distant and muted.."
     
     "Then i feel extreme pain somewhere in abdomen and realize i'm not dead
     yet.."
@@ -392,6 +404,7 @@ label crawl_to_her:
     "Then after some time which seemed very long to me, but was probably less
     than a minute, shooting stops."
     
+    show christine normal at center, very_close, shrouded
     "Christine comes to me and i can see her face through red shroud."
     
     ch "It's alright now. Bad people are dead, i won't let anybody hurt you
@@ -482,7 +495,10 @@ label real_wakeup:
     and realize it was only a dream.. Then i realize i'm still wheezing in
     attempt to scream."
     "I stop and get up smashing tin can with my foot. Probably beer can.. Yeah,
-    we were drinking yesterday.. Then i see Christine and Fyodor standing in the
+    we were drinking yesterday.."
+    
+    show christine normal at center, distant
+    "Then i see Christine and Fyodor standing in the
     doorway. Oh, how good to see her without that cold fire in glance.."
     fe "Are you okay?.."
     ch "Had a bad dream, honey?"
@@ -532,13 +548,14 @@ label real_wakeup:
     menu:
         "look at it":
             jump look_at_package
-        "[doesn't matter":
+        "doesn't matter":
             jump uncurious_ending
     
 label look_at_package:
     "I shouldn't really be doing this, but i'll take a brief look at it."
     
-    "Well, not much to see. Just a box with label \"T-08\" on it. What can that be?"
+    "Well, not much to see. Just a box with label \"T-08\" on it. What can that
+    be?"
     
     menu:
         "Ask about it":
@@ -548,6 +565,14 @@ label look_at_package:
     
 label box_ask:
     "I'll ask Christine later."
+    
+    "I seat at my table and turn laptop on."
+    
+    "Pressing F5 to look at our LD page doesn't bring good news though. There is
+    no new comments except for some guy complaining about game crashed. Well, i
+    can't help anyway."
+    
+    "Then Christine goes from "
     
     if attitude < 0:
         jump bad_ending
@@ -694,5 +719,5 @@ label credits:
     "licensed under
     {a=http://creativecommons.org/licenses/by-sa/4.0/}CC-BY-SA{/a}"
     "made for {a=http://ludumdare.com}Ludum Dare 29{/a}"
-    "check {a=https://github.com/caryoscelus/ld29}here{/a} for updates"
+    "check {a=http://github.com/caryoscelus/ld29}here{/a} for updates"
     "thanks for playing!"
