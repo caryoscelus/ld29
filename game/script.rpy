@@ -15,7 +15,7 @@ image nobody normal     = "nobody-1.png"
 image nobody2 normal    = "nobody-1.png"
 
 # CHARACTERS
-define me = Character("Me",             color="#888888")
+define me = Character("Jack",           color="#888888")
 define ch = Character("Christine",      color="#BB3366", image="christine")
 define fe = Character("Fyodor",         color="#2244CC")
 define n0 = Character("Neightbour",     color="#000000")
@@ -551,7 +551,13 @@ label real_wakeup:
     graphics was placeholder, there was only one sound track and game run not
     without glitches. But overally, our entry was way better than previous one."
     
+    scene bg black
+    with fade
+    
     "..."
+    
+    scene bg room
+    with fade
     
     "Tuesday morning. I wake up early in the morning to see Christine off
     (Fyodor has already left yesterday)."
@@ -589,6 +595,8 @@ label box_ask:
     can't help anyway."
     
     "Then Christine returns from bathroom. I ask her about the package."
+    
+    show christine normal at center, close
     
     if attitude < 0:
         jump bad_ending
