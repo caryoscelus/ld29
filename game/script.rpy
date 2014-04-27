@@ -57,7 +57,7 @@ label wake_up_early:
     What if she won't wait for me?! Oh no, i must totally hurry and get up."
     "In fifteen minutes i'm already finishing my small breakfast."
     "Now, what should i wear? I must've prepared that yesterday, but was busy
-    with LD all day instead."
+    with Ludum Dare all day instead."
     
     "Ok, that should do."
     "I glance at the mirror and run to the exit."
@@ -107,9 +107,18 @@ label elevator_early:
     "Next five minutes i'm waiting for elevator to get back to me regretting i
     haven't run for it."
     
-    "On seventh floor elevator stops and an elderly woman comes into it."
+    "Finally, it comes and i slowly ride down."
     
-    n1 "Excuse me"
+    "On seventh floor elevator stops and an elderly woman comes into it. She
+    looks a bit nervous."
+    
+    n1 "Excuse me, have you heard anything about that giantic metheorite coming
+    to destroy the Earth?.. I am so worried.. But please tell, what do you think
+    of it?.."
+    
+    "Now that is a weird question to ask in the elevator.."
+    
+    "I mumble that i haven't heard about it and pretend somebody is calling me."
     
     jump subway_1
     
@@ -172,7 +181,7 @@ label subway_1:
     scene bg fontain
     with fade
     
-    "Four minutes till ten. She's not here yet. Well, that's not unusual. She
+    "Four minutes till ten. She's not here yet. Well, that's not strange. She
     doesn't want to wait me like previous time.."
     "I'm sitting on fontain edge, nervously looking at clock on the gates and at
     the people entering."
@@ -414,12 +423,12 @@ label crawl_to_her:
     
     menu:
         "So you were lying for me all this time!..":
-            attitude -= 1
+            $ attitude -= 1
             jump lying
         "But aren't you just like them if you such methods?..":
             jump methods
         "Well, maybe you're right..":
-            attitude += 1
+            $ attitude += 1
             jump youre_right
 
 label lying:
