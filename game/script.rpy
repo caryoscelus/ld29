@@ -76,7 +76,12 @@ label wake_up_late:
     scene bg room
     with dissolve
     
-    "todo"
+    "It didn't well that well though.. In the sleep i seem to dlay that alarm
+    two more times.. Okay, now i definitely have no time! I grab some food on
+    the kitchen and dress up in first clothes that looked decently."
+    "When i run out from apartment, i see elevator doors are closing! I don't
+    want to loose my chance so i run as quick as i can."
+    
     jump elevator_late
     
 label elevator_run:
@@ -98,13 +103,25 @@ label elevator_run:
 label elevator_early:
     scene bg elevator
     with fade
-    "todo"
+    
+    "Next five minutes i'm waiting for elevator to get back to me regretting i
+    haven't run for it."
+    
+    "On seventh floor elevator stops and an elderly woman comes into it."
+    
+    n1 "Excuse me"
+    
     jump subway_1
     
 label elevator_late:
     scene bg elevator
     with fade
-    "todo"
+    
+    "I burst into closing doors and bump into kissing couple."
+    "For a second i regret running so enthusiastic."
+    me "Sorry!"
+    "They only give me a long look though."
+    
     jump subway_1
     
 label subway_1:
@@ -121,7 +138,7 @@ label subway_1:
     scene bg subway
     with fade
     "Since i live in suburb, it's a long way underground for me. To not waste
-    time, i return to playing \"Mystery of Magenta II\", which i haven't played
+    time, i jump credits to playing \"Mystery of Magenta II\", which i haven't played
     since LD started and thus had slight withdrawl syndrome."
     me "Woah, John turned out to be villain! Now that's really tough moral
     choice for detective.."
@@ -188,7 +205,11 @@ label show_the_way:
     jump weird_people_day
     
 label dont_know:
-    "todo"
+    "I don't want to strain my brain now.."
+    me "Sorry, i don't know.."
+    s0 "..umm, fine."
+    "He quickly disappears in the crowd."
+    
     jump weird_people_day
     
 label weird_people_day:
@@ -203,11 +224,11 @@ label weird_people_day:
     
     ".."
     
-    menu:
-        "Walk around the fontain":
-            "todo"
-        "Continue sitting":
-            "todo"
+    #menu:
+        #"Walk around the fontain":
+            #"todo"
+        #"Continue sitting":
+            #"todo"
     
     "..It's 10:15. I've called her three times already, but her phone is still
     out of network."
@@ -349,18 +370,92 @@ label crawl_to_her:
     a2 "Damned boy! He's her mate in the end! We should've shoot him ealier."
     
     "After this words i suddenly stumble and feel weak. Voices and shooting
-    sounds becomes distant and muted.. My mind slowly collapses into the
-    darkness."
+    sounds becomes distant and muted.."
     
     scene bg red
     with dissolve
     
-    me "Am i dying now?.. Damn, i won't even know how well my LD project is
-    received... And.. what happend to detective and John.."
+    "Then i feel extreme pain somewhere in abdomen and realize i'm not dead
+    yet.."
+    
+    "I can't do anything but lie on the floor and bleed though.."
+    
+    "Then after some time which seemed very long to me, but was probably less
+    than a minute, shooting stops."
+    
+    "Christine comes to me and i can see her face through red shroud."
+    
+    ch "It's alright now. Bad people are dead, i won't let anybody hurt you
+    anymore.."
+    
+    "I try to answer, but only wheeze instead."
+    
+    "She notices how bad i'm wounded and her face become more sad."
+    
+    "Then i finally manage to clear my throat."
+    
+    me "Why is this all happening, Christy? Who were those people?"
+    ch "Well, i guess goverment agents or something like this. I don't know
+    exactly who were they."
+    ch "But that guy was quite right about me - they do call us a terrorist
+    organization. But we are not {i}those{/i} kind of terrorists who kill
+    innocent people. We're only killing those who are abusing their power and
+    have blood on their hands.."
+    ch "You live in the capital and see life through rose-coloured glasses. No
+    matter what news you'll look into - there will always be some good guys
+    fighting bad guys. But in fact, that would mean bad guys are fighting bad
+    guys."
+    ch "Most of our polititians and big corporations' owners, those who have
+    real power are worst kind of criminals."
+    ch "And unfortunatelly it's not something random.. Human nature and
+    govermental institutes work this way."
+    ch "You either can't have power for any long amount of time or become one of
+    them and start exploiting everybody and kill those who protest."
+    
+    menu:
+        "So you were lying for me all this time!..":
+            attitude -= 1
+            jump lying
+        "But aren't you just like them if you such methods?..":
+            jump methods
+        "Well, maybe you're right..":
+            attitude += 1
+            jump youre_right
+
+label lying:
+    ch "What else could i do.. I'm really sorry you got involved in this."
+    jump dying
+
+label methods:
+    ch "I know, everybody is saying this unacceptable. And i don't enjoy this."
+    ch "But that's the only way, you know. It's impossible to make people know
+    there's something wrong. They just won't bother to listen."
+    ch "And if most of people don't realize situation, it's so easy to suppress
+    those who understand and don't want to live by these rules."
+
+label youre_right:
+    ch "I am really sorry you are dying because of this. And thanks for being
+    there for me. I really do love you."
+    jump dying
     
 label crawl_to_agents:
-    "todo"
-    jump blackout
+    "I'm too afraid of Christine now.. So i crawl towards those two agents."
+    
+    "Then train stops harshly and everybody stumble.."
+    "And i see as one of the agents accidently puts gun in my direction.."
+    
+    scene bg red
+    with dissolve
+    "I feel shock and weakness. Voices and shooting sounds become distant and
+    muted.."
+    
+    jump dying
+    
+label dying:
+    "My mind slowly collapses into the darkness."
+    
+    me "Am i dying now?.. Damn, i won't even know how well my LD project is
+    received... And.. what happend to detective and John.."
     
 label blackout:
     scene black
@@ -471,7 +566,7 @@ label true_ending:
     with fade
     
     ":: True Ending ::"
-    return
+    jump credits
     
 label bloody_ending:
     "They say \"Don't touch suspiciuos objects\", but who really listen to that.
@@ -484,7 +579,7 @@ label bloody_ending:
     "BOOM!"
     
     ":: Bloody Ending ::"
-    return
+    jump credits
     
 label normal_ending:
     ch "That..."
@@ -499,11 +594,26 @@ label normal_ending_end:
     "When Christine left, i felt extreme withdrawl effect from not playing
     \"Mystery of Magenta II\" for three days in a row."
     
-    "So i grab some fast food from kitchen and comfortly lie on the bed with my
+    "So i grab some fastfood from kitchen and comfortly lie on the bed with my
     phone."
     
+    "After solving another puzzle, i start to read next chapter."
+    "At first, it seemed a bit familiar."
+    "I kept reading and then.. John is the villain!"
+    "Now i have strong feeling of dejavu."
+    "The reality now is so like dream, only difference is that we were making
+    LD together with Christine and thus we weren't on the date after it.."
+    "But that won't make any difference to her if she's heading to that
+    amusement park now.."
+    "I decide to give her a call.."
+    "..but obviously her phone is out of reach again."
+    "Well, then.. I can only go there and see for myself now.."
+    
+    scene bg black
+    with fade
+    
     ":: Normal Ending ::"
-    return
+    jump credits
 
 label bad_ending:
     ch "That's a secret! Give it to me."
@@ -514,7 +624,7 @@ label bad_ending:
     jump common_ending
     
 label bad_ending_end:
-    "When Christine left, i returned to my room, layed in bed and turned TV on."
+    "When Christine left, i jump creditsed to my room, layed in bed and turned TV on."
     "I'm really too lazy to even play \"Mystery of Magenta II\" so i'm trying to
     relax by watching stupid shows for next two hours."
     
@@ -532,7 +642,7 @@ label bad_ending_end:
     with fade
     
     ":: Bad Ending ::"
-    return
+    jump credits
 
 label uncurious_ending:
     "Why bother?.. Let's prepare some breakfast instead!"
@@ -551,7 +661,7 @@ label uncurious_ending_end:
     with fade
     
     ":: Bed Ending ::"
-    return
+    jump credits
     
 label common_ending:
     "..."
@@ -566,3 +676,14 @@ label common_ending:
         jump bad_ending_end
     else:
         jump uncurious_ending_end
+
+label credits:
+    scene bg black
+    with fade
+    
+    "(c) caryoscelus, 2014"
+    "licensed under
+    {a=http://creativecommons.org/licenses/by-sa/4.0/}CC-BY-SA{/a}"
+    "made for {a=http://ludumdare.com}Ludum Dare 29{/a}"
+    "check {a=https://github.com/caryoscelus/ld29}here{/a} for updates"
+    "thanks for playing!"
