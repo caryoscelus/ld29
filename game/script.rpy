@@ -161,8 +161,8 @@ label subway_1:
     scene bg subway
     with fade
     "Since i live in suburb, it's a long way underground for me. To not waste
-    time, i jump credits to playing \"Mystery of Magenta II\", which i haven't played
-    since LD started and thus had slight withdrawl syndrome."
+    time, i jump credits to playing \"Mystery of Magenta II\", which i haven't
+    played since LD started and thus had slight withdrawl syndrome."
     me "Woah, John turned out to be villain! Now that's really tough moral
     choice for detective.."
     "I'm so excited that i even said it out loud. But it's so noisy here,
@@ -170,15 +170,20 @@ label subway_1:
     
     menu:
         "I can't forgive him!":
-            "todo"
+            "No, his crimes cannot be forgiven!"
+            me "I must stop him no matter what!"
+            "Wait, have i said that aloud again?"
             $ attitude -= 1
         "He's my friend, but i must stop him.":
-            "todo"
+            "There are wrong things and right things. No matter who does them."
         "He's my friend, he may have reasons to do that..":
-            "todo"
+            "Whatever those reasons are, i must find them out first. And only
+            then take any action.."
+            "He can't be {i}that{/i} evil!"
             $ attitude += 1
     
-    "todo"
+    "Okay, that's enough playing. Or i'll miss my station."
+    "..And here it is!"
     
     scene bg subway_stairs
     with fade
