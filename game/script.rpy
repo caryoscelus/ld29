@@ -1,9 +1,19 @@
 ﻿# IMAGES
-# eg. image eileen happy = "eileen_happy.png"
+image bg black          = "black-1.png"
+image bg red            = "red-1.png"
+
+image bg room           = "room-1.png"
+image bg elevator       = "elevator-1.png"
+image bg street         = "street-1.png"
+image bg subway_stairs  = "subway-stairs-1.png"
+image bg subway         = "subway-1.png"
+image bg fontain        = "fontain-1.png"
+
+image christine normal  = "christine-1.png"
 
 # CHARACTERS
 define me = Character("Me",             color="#888888")
-define ch = Character("Christine",      color="#BB3366")
+define ch = Character("Christine",      color="#BB3366", image="christine")
 define fe = Character("Fyodor",         color="#2244CC")
 define n0 = Character("Neightbour",     color="#000000")
 define n1 = Character("Neightbour",     color="#000000")
@@ -14,10 +24,15 @@ define a1 = Character("Agent 1",        color="#776644")
 define a2 = Character("Agent 2",        color="#776644")
 define a3 = Character("Agent 3",        color="#776644")
 
+# TRANSFORMS
+define close = Transform(yoffset=240)
 
 # The game starts here.
 label start:
     $ attitude = 0
+    
+    scene bg black
+    with dissolve
     
     "Sound of alarm wakes me up early in the morning.
     {p}Damn! it's only 8:00, why can't i sleep a bit more?.."
@@ -35,6 +50,9 @@ label start:
             jump wake_up_early
     
 label wake_up_early:
+    scene bg room
+    with dissolve
+    
     "That's right. I would feel so awful if i will be late for another date.
     What if she won't wait for me?! Oh no, i must totally hurry and get up."
     "In fifteen minutes i'm already finishing my small breakfast."
@@ -54,10 +72,16 @@ label wake_up_early:
     
 label wake_up_late:
     "I set alarm to wake me up in five minutes and dived into the blanket"
+    
+    scene bg room
+    with dissolve
+    
     "todo"
     jump elevator_late
     
 label elevator_run:
+    scene bg elevator
+    with fade
     "I've made it! Doors closes behind me and i almost bumped into somebody."
     me "Excuse me.."
     n0 "Oh, hey, aren't you Jack?"
@@ -72,18 +96,30 @@ label elevator_run:
     jump subway_1
     
 label elevator_early:
+    scene bg elevator
+    with fade
     "todo"
     jump subway_1
     
 label elevator_late:
+    scene bg elevator
+    with fade
     "todo"
     jump subway_1
     
 label subway_1:
+    scene bg street
+    with fade
+    
     "We part our ways after we exit the building. I guess i'll never find out
     who was that."
     "But i must hurry.. I almost run to the subway."
     
+    scene bg subway_stairs
+    with fade
+    
+    scene bg subway
+    with fade
     "Since i live in suburb, it's a long way underground for me. To not waste
     time, i return to playing \"Mystery of Magenta II\", which i haven't played
     since LD started and thus had slight withdrawl syndrome."
@@ -102,11 +138,23 @@ label subway_1:
             "todo"
             $ attitude += 1
     
+    "todo"
+    
+    scene bg subway_stairs
+    with fade
+    
+    scene bg street
+    with fade
+    
     "Finally! I exit this technological dungeon and breath open air."
     "I even have seven minutes left. Still i'm rushing to the amusement park."
     "Even though it's quite early, a lot of people are already here. I dive into
     crowd near the entrance and after a minute of crushing in it, i'm near the
     fontain which is our meeting point."
+    
+    scene bg fontain
+    with fade
+    
     "Four minutes till ten. She's not here yet. Well, that's not unusual. She
     doesn't want to wait me like previous time.."
     "I'm sitting on fontain edge, nervously looking at clock on the gates and at
@@ -173,6 +221,8 @@ label weird_people_day:
     two men in uniform, probably from security."
     
     ch "Hey, Jack!"
+    
+    show christine normal at center, close
     "Her voice! She finally came! For a second i even forgot about that weird
     accident."
     me "Hi, Christy.. I'm so glad you came.. I was so worried.."
@@ -190,7 +240,19 @@ label weird_people_day:
     
     "So i grab her hand and we run to the exit."
     
+    scene bg street
+    show christine normal at center, close
+    with fade
+    
+    scene bg subway_stairs
+    show christine normal at center, close
+    with fade
+    
     "When we're entering subway, i hear police siren howling."
+    
+    scene bg subway
+    show christine normal at center, close
+    with fade
     
     "When we're already in the train heading towards city center, i say:"
     me "This all looks like we're running from the police"
@@ -290,17 +352,28 @@ label crawl_to_her:
     sounds becomes distant and muted.. My mind slowly collapses into the
     darkness."
     
-    
+    scene bg red
+    with dissolve
     
     me "Am i dying now?.. Damn, i won't even know how well my LD project is
     received... And.. what happend to detective and John.."
     
+label crawl_to_agents:
+    "todo"
+    jump blackout
+    
 label blackout:
+    scene black
+    with dissolve
+    
     "..."
     "..."
     "..."
     
 label real_wakeup:
+    scene bg room
+    with Fade(0.5, 0.0, 0.5, color="#FFFFFF")
+    
     "..That was my last thoughts before i wake up in cold sweat. I open my eyes
     and realize it was only a dream.. Then i realize i'm still wheezing in
     attempt to scream."
@@ -337,5 +410,78 @@ label real_wakeup:
     
     "..."
     
+    "Three days of intense work resulted in producing \"reasonably good\" game
+    as we all considered. Of course, it lacked proper balance, nearly half of
+    graphics was placeholder, there was only one sound track and game run not
+    without glitches. But overally, our entry was way better than previous one."
+    
+    "..."
+    
+    "Tuesday morning. I wake up early in the morning to see Christine off
+    (Fyodor has already left yesterday)."
+    
+    "Looks like she's taking shower. I lazily do some excercices."
+    
+    "As i enter living room, my attention is grabbed by an unfamiliar package
+    laying near the door."
+
+    menu:
+        "look at it":
+            jump look_at_package
+        "[doesn't matter":
+            jump uncurious_ending
+    
+label look_at_package:
+    "I shouldn't really be doing this, but i'll take a brief look at it."
+    
+    "Well, not much to see. Just a box with label \"T-08\" on it. What can that be?"
+    
+    menu:
+        "Ask about it":
+            jump box_ask
+        "Open it":
+            jump bloody_ending
+    
+label box_ask:
+    "I'll ask Christine later."
+    
+    if attitude < 0:
+        ch "That's a secret! Give it to me."
+        "She is quite annoyed."
+    elif attitude < 2:
+        ch "That..."
+        "She hesitates"
+        ch "Well, "
+    else:
+        jump true_ending
+    
+label true_ending:
+    ch "That... {w=1}Jack, can i trust you?"
+    me "Yeah?.."
+    ch "Can you keep a dangerous secret?"
+    me "Yeah, sure. I won't tell anybody.."
+    ch "Don't take it that lightly! This can put you in dager! And you certainly must not tell this to {i}anybody{/i} including police."
+    "..Something like that was in my dream two days ago, wasn't it?.."
+    me "If you're in any danger, i'll be glad to share it with you!"
+    "Thre is a small pause before she answers."
+    ch "..Okay then. I'm a member of underground revolutionary organization. And we're making an execution of goverment official today. That box contains bomb for him."
+    "..Now that definitly sounds like my dream.. Only it's not."
+    
+    scene bg black
+    with fade
+    
+    ":: True Ending ::"
+    
+label bloody_ending:
+    "They say \"Don't touch suspiciuos objects\", but who really listen to that.
+    At least not me.."
+    "I open the box and than..."
+    
+    scene bg red
+    with fade
+    
+    "BOOM!"
+    
+    ":: Bloody Ending ::"
     
     return
