@@ -446,12 +446,9 @@ label box_ask:
     "I'll ask Christine later."
     
     if attitude < 0:
-        ch "That's a secret! Give it to me."
-        "She is quite annoyed."
+        jump bad_ending
     elif attitude < 2:
-        ch "That..."
-        "She hesitates"
-        ch "Well, "
+        jump normal_ending
     else:
         jump true_ending
     
@@ -460,17 +457,21 @@ label true_ending:
     me "Yeah?.."
     ch "Can you keep a dangerous secret?"
     me "Yeah, sure. I won't tell anybody.."
-    ch "Don't take it that lightly! This can put you in dager! And you certainly must not tell this to {i}anybody{/i} including police."
+    ch "Don't take it that lightly! This can put you in dager! And you certainly
+    must not tell this to {i}anybody{/i} including police."
     "..Something like that was in my dream two days ago, wasn't it?.."
     me "If you're in any danger, i'll be glad to share it with you!"
     "Thre is a small pause before she answers."
-    ch "..Okay then. I'm a member of underground revolutionary organization. And we're making an execution of goverment official today. That box contains bomb for him."
-    "..Now that definitly sounds like my dream.. Only it's not."
+    ch "..Okay then. I'm a member of underground revolutionary organization. And
+    we're making an execution of goverment official today. That box contains
+    bomb for him."
+    "..Now that definitely sounds like my dream.. Only this time it's not.."
     
     scene bg black
     with fade
     
     ":: True Ending ::"
+    return
     
 label bloody_ending:
     "They say \"Don't touch suspiciuos objects\", but who really listen to that.
@@ -483,5 +484,85 @@ label bloody_ending:
     "BOOM!"
     
     ":: Bloody Ending ::"
-    
     return
+    
+label normal_ending:
+    ch "That..."
+    "She hesitates"
+    ch "Sorry, i can't really tell you now.."
+    me "Okay, don't worry about it.."
+    
+    $ ending = "normal"
+    jump common_ending
+    
+label normal_ending_end:
+    "When Christine left, i felt extreme withdrawl effect from not playing
+    \"Mystery of Magenta II\" for three days in a row."
+    
+    "So i grab some fast food from kitchen and comfortly lie on the bed with my
+    phone."
+    
+    ":: Normal Ending ::"
+    return
+
+label bad_ending:
+    ch "That's a secret! Give it to me."
+    "She is quite annoyed."
+    me "Sorry.."
+    
+    $ ending = "bad"
+    jump common_ending
+    
+label bad_ending_end:
+    "When Christine left, i returned to my room, layed in bed and turned TV on."
+    "I'm really too lazy to even play \"Mystery of Magenta II\" so i'm trying to
+    relax by watching stupid shows for next two hours."
+    
+    "When i was almost sleeping, the show was over and news started."
+    
+    tv "..at the amusement park.. ..explosion.. ..was killed.."
+    
+    "I wasn't paying attention initially and missed some words, but general
+    meaning struck me like a lighting.. WHAT THE HELL?!"
+    
+    "My messed up thoughts are interrupted when i hear somebody is ringing on my
+    door.."
+    
+    scene bg black
+    with fade
+    
+    ":: Bad Ending ::"
+    return
+
+label uncurious_ending:
+    "Why bother?.. Let's prepare some breakfast instead!"
+    
+    $ ending = "uncurious"
+    jump common_ending
+    
+label uncurious_ending_end:
+    "When Christine left, i realize i'm really tired from this LD. I'm even too
+    lazy to play \"Mystery of Magenta II\", which i haven't played for last
+    three days.."
+    
+    "I just lay on the bed and take a nap.."
+    
+    scene bg black
+    with fade
+    
+    ":: Bed Ending ::"
+    return
+    
+label common_ending:
+    "..."
+    
+    "We have a breakfast and then she leaves taking that package with her."
+    
+    "..."
+    
+    if ending == "normal":
+        jump normal_ending_end
+    elif ending == "bad":
+        jump bad_ending_end
+    else:
+        jump uncurious_ending_end
