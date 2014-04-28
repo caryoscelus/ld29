@@ -2,10 +2,13 @@ ld29
 ====
 
 My LD29 (http://www.ludumdare.com/compo/) entry in development. It's Ren'Py
-visual novel, so see http://www.renpy.org/ for launching instructions or wait
-for ready builds.
+visual novel, so see http://www.renpy.org/ for launching instructions or get
+ready builds on release page.
 
 More info to be added..
+
+Please note that this repository will be updating after LD finishes.. So for ld
+version, check our release page.
 
 license
 -------
