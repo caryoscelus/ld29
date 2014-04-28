@@ -107,7 +107,7 @@ label elevator_run:
     n0 "You must've forgotten me, right? Don't worry about it. Oh, sorry,
     someone's calling me."
     "He turned to the wall and started talking on the phone."
-    n0 "coi la blekus. mi ..."
+    n0 "coi la blekus. .i mi ..."
     "..But in some exotic language i've never heard before."
     
     jump subway_1
