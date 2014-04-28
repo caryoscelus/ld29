@@ -1,5 +1,5 @@
-ld29
-====
+The Day After
+=============
 
 My LD29 (http://www.ludumdare.com/compo/) entry in development. It's Ren'Py
 visual novel, so see http://www.renpy.org/ for launching instructions or get
