@@ -772,6 +772,6 @@ label credits:
     "(c) caryoscelus, 2014"
     "licensed under
     {a=http://creativecommons.org/licenses/by-sa/4.0/}CC-BY-SA{/a}"
-    "made for {a=http://ludumdare.com}Ludum Dare 29{/a}"
+    "made for {a=http://www.ludumdare.com/compo/ludum-dare-29/?action=preview&uid=17960}Ludum Dare 29{/a}"
     "check {a=http://github.com/caryoscelus/ld29}here{/a} for updates"
     "thanks for playing!"
