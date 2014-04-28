@@ -7,7 +7,7 @@ image bg elevator       = "elevator-1.png"
 image bg street         = "street-1.png"
 image bg subway_stairs  = "subway-stairs-1.png"
 image bg subway         = "subway-1.png"
-image bg fontain        = "fontain-1.png"
+image bg fontain        = "fountain-1.png"
 
 image christine normal  = "christine-1.png"
 image stranger normal   = "stranger-1.png"
@@ -85,7 +85,7 @@ label wake_up_late:
     scene bg room
     with dissolve
     
-    "It didn't well that well though.. In the sleep i seem to dlay that alarm
+    "It didn't well that well though.. In the sleep i seem to delay that alarm
     two more times.. Okay, now i definitely have no time! I grab some food on
     the kitchen and dress up in first clothes that looked decently."
     "When i run out from apartment, i see elevator doors are closing! I don't
@@ -126,7 +126,7 @@ label elevator_early:
     
     show nobody normal at left, close
     
-    n1 "Excuse me, have you heard anything about that giantic metheorite coming
+    n1 "Excuse me, have you heard anything about that gigantic meteorite coming
     to destroy the Earth?.. I am so worried.. But please tell, what do you think
     of it?.."
     
@@ -164,8 +164,8 @@ label subway_1:
     scene bg subway
     with fade
     "Since i live in suburb, it's a long way underground for me. To not waste
-    time, i jump credits to playing \"Mystery of Magenta II\", which i haven't
-    played since LD started and thus had slight withdrawl syndrome."
+    time, i return to playing \"Mystery of Magenta II\", which i haven't
+    played since LD started and thus had slight withdrawal syndrome."
     me "Woah, John turned out to be villain! Now that's really tough moral
     choice for detective.."
     "I'm so excited that i even said it out loud. But it's so noisy here,
@@ -198,14 +198,14 @@ label subway_1:
     "I even have seven minutes left. Still i'm rushing to the amusement park."
     "Even though it's quite early, a lot of people are already here. I dive into
     crowd near the entrance and after a minute of crushing in it, i'm near the
-    fontain which is our meeting point."
+    fountain which is our meeting point."
     
     scene bg fontain
     with fade
     
     "Four minutes till ten. She's not here yet. Well, that's not strange. She
     doesn't want to wait me like previous time.."
-    "I'm sitting on fontain edge, nervously looking at clock on the gates and at
+    "I'm sitting on fountain edge, nervously looking at clock on the gates and at
     the people entering."
     
     "The minute hand hits \"12\" mark and starts a new circle. Another two
@@ -218,7 +218,7 @@ label subway_1:
     "Suddenly, someone calls out to me. I turn around and see the stranger."
     "At first glance he seems to be somehow familiar to me, but i can't even
     determine why."
-    "His look is definitly out of place though."
+    "His look is definitely out of place though."
     s0 "Excuse me, can you tell me where is shooting range here?"
     
     menu:
@@ -263,7 +263,7 @@ label weird_people_day:
     ".."
     
     #menu:
-        #"Walk around the fontain":
+        #"Walk around the fountain":
             #"todo"
         #"Continue sitting":
             #"todo"
@@ -274,9 +274,9 @@ label weird_people_day:
     explosion. What idiot is launching fireworks in the morning anyway?.."
     "I notice some change in sound background. Hmm, that monotonous guy stopped
     talking, but also people are starting to sound more worried."
-    "Then somebody runs past me looking very frightend. I look in the direction
+    "Then somebody runs past me looking very frightened. I look in the direction
     of main stage (which can't be seen from here, but i know exactly where it
-    is). There are few more people looking extremly frightend.. Then there are
+    is). There are few more people looking extremely frightened.. Then there are
     two men in uniform, probably from security."
     
     ch "Hey, Jack!"
@@ -287,10 +287,10 @@ label weird_people_day:
     me "Hi, Christy.. I'm so glad you came.. I was so worried.."
     "I really was. Was afraid of loosing her."
     ch "Sorry i am late.. But it's not time for that."
-    ch "Look there. Something happend, i think it's not quite safe to stay here
+    ch "Look there. Something happened, i think it's not quite safe to stay here
     now."
     ch "Let's go back to the subway and then decide where to go."
-    "She doesn't look really frightend even though now it's obviously looking
+    "She doesn't look really frightened even though now it's obviously looking
     like a serious situation: people are chaotically running everywhere.
     {p}But she looks only a bit worried and maybe even annoyed."
     "I realize she's totally right about leaving this place. Even if it's not
@@ -320,7 +320,7 @@ label weird_people_day:
     me "Well, yeah, i played. There wasn't anything better to do on the way here
     anyway."
     ch "See, it's all your imagination!"
-    me "But that accident, i don't even know what was that, but it happend."
+    me "But that accident, i don't even know what was that, but it happened."
     me "And you say such things happen only in fiction!"
     ch "I'm just joking, silly."
     "She slightly pokes me and laughs."
@@ -346,15 +346,15 @@ label weird_people_day:
     ch "Drop your weapons and get out of here! Our i'll cut his throat!"
     "What?! As i hear this i realize that it's Christine staying behind me and
     pressing dagger's blade on my neck."
-    "Passangers are screaming and running out of train to the station somewhere
+    "Passengers are screaming and running out of train to the station somewhere
     in the distant background. My attention is directed solely towards those
     guys in uniform.
     One of them who is looking more confident than others steps forward and
     says:"
     a0 "Really?.. Isn't that your comrade?"
     "He grins and finally takes his gun of the pocket."
-    "His collegue is speaking to the transmitter."
-    a1 "We have a hostage here, please check if he's civillian. Damn, i hope
+    "His colleague is speaking to the transmitter."
+    a1 "We have a hostage here, please check if he's civilian. Damn, i hope
     he's not."
     ch "Don't make another step!"
     "Christine pushes blade further and i feel pain and then something wet on my
@@ -364,7 +364,7 @@ label weird_people_day:
     ch "Don't even try to fuck with me, idiot!"
     "At this moment train is starting to leave station. I nearly lost balance
     and blade pricked me again. Finally i regain ability to speak."
-    me "What.. what is this all?.. Christy, what is happenning?.."
+    me "What.. what is this all?.. Christy, what is happening?.."
     "My voice sound distant and weak."
     a1 "She's a terrorist, boy. Don't worry, we'll save you if you won't do
     anything stupid."
@@ -409,12 +409,12 @@ label lay_down:
     jump crawl_to
     
 label crawl_to_her:
-    "Even though Christine does look so scary now and is certanly a different
+    "Even though Christine does look so scary now and is certainly a different
     person than i knew for so long, i still feel safer with her than these
     \"agents\"."
     "She catches a pistol flying from the bum side and starts shooting as well."
     
-    a2 "Damned boy! He's her mate in the end! We should've shoot him ealier."
+    a2 "Damned boy! He's her mate in the end! We should've shoot him earlier."
     
     scene bg red
     with dissolve
@@ -446,7 +446,7 @@ label crawl_to_her:
     "Then i finally manage to clear my throat."
     
     me "Why is this all happening, Christy? Who were those people?"
-    ch "Well, i guess goverment agents or something like this. I don't know
+    ch "Well, i guess government agents or something like this. I don't know
     exactly who were they."
     ch "But that guy was quite right about me - they do call us a terrorist
     organization. But we are not {i}those{/i} kind of terrorists who kill
@@ -456,10 +456,10 @@ label crawl_to_her:
     matter what news you'll look into - there will always be some good guys
     fighting bad guys. But in fact, that would mean bad guys are fighting bad
     guys."
-    ch "Most of our polititians and big corporations' owners, those who have
+    ch "Most of our politicians and big corporations' owners, those who have
     real power are worst kind of criminals."
-    ch "And unfortunatelly it's not something random.. Human nature and
-    govermental institutes work this way."
+    ch "And unfortunately it's not something random.. Human nature and
+    governmental institutes work this way."
     ch "You either can't have power for any long amount of time or become one of
     them and start exploiting everybody and kill those who protest."
     
@@ -493,7 +493,7 @@ label crawl_to_agents:
     "I'm too afraid of Christine now.. So i crawl towards those two agents."
     
     "Then train stops harshly and everybody stumble.."
-    "And i see as one of the agents accidently puts gun in my direction.."
+    "And i see as one of the agents accidentally puts gun in my direction.."
     
     scene bg red
     with dissolve
@@ -510,7 +510,7 @@ label dying:
     "My mind slowly collapses into the darkness."
     
     me "Am i dying now?.. Damn, i won't even know how well my LD project is
-    received... And.. what happend to detective and John.."
+    received... And.. what happened to detective and John.."
     
 label blackout:
     scene black
@@ -556,7 +556,7 @@ label real_wakeup:
     me "Do you have code for that? Last time we were doing action game, you've
     spent most of jam to get things move smoothly!"
     fe "..And everybody is going to make platformer with this theme!"
-    ch "Hey, you are understimating me! I've made all the required enchancements
+    ch "Hey, you are underestimating me! I've made all the required enhancements
     to the engine.. And we've got enough booze to keep me productive"
     
     "..."
@@ -581,7 +581,7 @@ label real_wakeup:
     "Tuesday morning. I wake up early in the morning to see Christine off
     (Fyodor has already left yesterday)."
     
-    "Looks like she's taking shower. I lazily do some excercices."
+    "Looks like she's taking shower. I lazily do some exercises."
     
     "As i enter living room, my attention is grabbed by an unfamiliar package
     laying near the door."
@@ -631,13 +631,13 @@ label true_ending:
     me "Yeah?.."
     ch "Can you keep a dangerous secret?"
     me "Yeah, sure. I won't tell anybody.."
-    ch "Don't take it that lightly! This can put you in dager! And you certainly
+    ch "Don't take it that lightly! This can put you in dagger! And you certainly
     must not tell this to {i}anybody{/i} including police."
     "..Something like that was in my dream two days ago, wasn't it?.."
     me "If you're in any danger, i'll be glad to share it with you!"
-    "Thre is a small pause before she answers."
+    "There is a small pause before she answers."
     ch "..Okay then. I'm a member of underground revolutionary organization. And
-    we're making an execution of goverment official today. That box contains
+    we're making an execution of government official today. That box contains
     bomb for him."
     "..Now that definitely sounds like my dream.. Only this time it's not.."
     
@@ -648,7 +648,7 @@ label true_ending:
     jump credits
     
 label bloody_ending:
-    "They say \"Don't touch suspiciuos objects\", but who really listen to that.
+    "They say \"Don't touch suspicious objects\", but who really listen to that.
     At least not me.."
     "I open the box and than..."
     
@@ -672,10 +672,10 @@ label normal_ending:
     jump common_ending
     
 label normal_ending_end:
-    "When Christine left, i felt extreme withdrawl effect from not playing
+    "When Christine left, i felt extreme withdrawal effect from not playing
     \"Mystery of Magenta II\" for three days in a row."
     
-    "So i grab some fastfood from kitchen and comfortly lie on the bed with my
+    "So i grab some fastfood from kitchen and comfortably lie on the bed with my
     phone."
     
     "After solving another puzzle, i start to read next chapter."
@@ -705,7 +705,7 @@ label bad_ending:
     jump common_ending
     
 label bad_ending_end:
-    "When Christine left, i jump creditsed to my room, layed in bed and turned TV on."
+    "When Christine left, i returned to my room, layed in bed and turned TV on."
     "I'm really too lazy to even play \"Mystery of Magenta II\" so i'm trying to
     relax by watching stupid shows for next two hours."
     
