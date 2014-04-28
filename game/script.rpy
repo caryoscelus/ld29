@@ -331,6 +331,8 @@ label weird_people_day:
     
     "By this time the train is already approaching next station."
     
+    play music "uncertain-1.ogg"
+    
     "When doors opened, a group of four unfriendly looking people in grey suites
     come into the coach. Then everything happens very fast. I catch gaze of one
     of them. I observe his hand coming out of pocket, and then suddenly feel
@@ -431,6 +433,7 @@ label crawl_to_her:
     than a minute, shooting stops."
     
     show christine normal at center, very_close, shrouded
+    play music "uncertain-1.ogg"
     "Christine comes to me and i can see her face through red shroud."
     
     ch "It's alright now. Bad people are dead, i won't let anybody hurt you
@@ -503,6 +506,7 @@ label crawl_to_agents:
     jump dying
     
 label dying:
+    stop music fadeout 2.0
     "My mind slowly collapses into the darkness."
     
     me "Am i dying now?.. Damn, i won't even know how well my LD project is
@@ -610,6 +614,8 @@ label box_ask:
     can't help anyway."
     
     "Then Christine returns from bathroom. I ask her about the package."
+    
+    play music "uncertain-1.ogg" fadeout 1 fadein 1
     
     show christine normal at center, close
     
